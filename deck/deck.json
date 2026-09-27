@@ -1,0 +1,68 @@
+{
+  "v": 4,
+  "attachments": {},
+  "createdOnFiles": {
+    "at": "2026-09-27T11:10:28Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "faces": {
+    "caveat": {
+      "family": "Caveat",
+      "href": "https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap"
+    },
+    "ibm-plex-sans-thai": {
+      "family": "IBM Plex Sans Thai",
+      "href": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;600&display=swap"
+    },
+    "mitr": {
+      "family": "Mitr",
+      "href": "https://fonts.googleapis.com/css2?family=Mitr:wght@400;500;600&display=swap"
+    }
+  },
+  "order": [
+    "cover",
+    "tooth",
+    "disease",
+    "plan",
+    "feature",
+    "leaders",
+    "memo",
+    "dims",
+    "find",
+    "when",
+    "nets",
+    "people",
+    "stories",
+    "robots",
+    "open",
+    "numbers",
+    "billion",
+    "money",
+    "why",
+    "bugs",
+    "ask",
+    "end",
+    "sources"
+  ],
+  "sections": {
+    "s1": {
+      "description": "The broken tooth and why search fails in Chiang Mai",
+      "start": "cover"
+    },
+    "s2": {
+      "description": "The feature: an audience of robots",
+      "start": "feature"
+    },
+    "s3": {
+      "before": null,
+      "description": "The twelve dimensions, one arm at a time",
+      "start": "dims"
+    },
+    "s4": {
+      "description": "Numbers, the billion, money, bugs and the ask",
+      "start": "numbers"
+    }
+  },
+  "title": "Mot Dang — the plan"
+}

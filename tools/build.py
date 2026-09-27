@@ -21,6 +21,26 @@ TITLE = "Mot Dang — the plan · แผนมดแดง"
 DESC = ("A business plan in twelve dimensions, for an audience of robots. "
         "Mot Dang, a Thai-first directory of Chiang Mai and Chiang Rai: 62 days, one human, 88,888 places.")
 
+GUIDE = [
+    ("1", "Cover", "a name and one strange line", "หน้าปก", "ชื่อ กับประโยคแปลก ๆ หนึ่งประโยค"),
+    ("2", "The problem", "one day that happened, in three beats", "ปัญหา", "วันหนึ่งที่เกิดขึ้นจริง เล่าเป็นสามจังหวะ"),
+    ("3", "The diagnosis", "two numbers that disagree", "อาการ", "ตัวเลขสองตัว ที่ขัดกัน"),
+    ("4", "The plan", "the joke that is also the strategy", "แผน", "มุกตลก ที่เป็นกลยุทธ์ด้วย"),
+    ("5", "The feature", "your worst number, told as the point", "จุดขาย", "ตัวเลขที่แย่ที่สุด เล่าให้เป็นประเด็น"),
+    ("6", "Leaderboard", "who uses it, ranked", "ตารางคะแนน", "ใครใช้บ้าง เรียงอันดับ"),
+    ("7", "Memo", "talk to the audience you have", "บันทึก", "พูดกับผู้ฟัง ที่คุณมีอยู่"),
+    ("8", "Dimensions", "every arm on one page", "มิติ", "ทุกแขนขา ในหน้าเดียว"),
+    ("9–15", "The arms", "one card each: what it does, a number, a link", "แขนขา", "การ์ดละหนึ่งแขน ทำอะไร ตัวเลข ลิงก์"),
+    ("16", "Traction", "time, people, output", "ตัวเลข", "เวลา คน ผลงาน"),
+    ("17", "The goal", "a big number, with its arithmetic", "เป้าหมาย", "ตัวเลขใหญ่ พร้อมเลขคณิต"),
+    ("18", "Money", "each rail with its status; blanks said plainly", "รายได้", "ช่องทาง พร้อมสถานะ"),
+    ("19", "Why you", "one quote", "ทำไมต้องคุณ", "คำพูดเดียว"),
+    ("20", "Known bugs", "risks as a triage table", "บั๊ก", "ความเสี่ยง เป็นตารางคัดแยก"),
+    ("21", "The ask", "a question, not a figure", "ข้อเสนอ", "เป็นคำถาม ไม่ใช่ตัวเลข"),
+    ("22", "The end", "the line people repeat", "ปิดท้าย", "ประโยคที่คนจะพูดต่อ"),
+    ("23", "Sources", "where each number came from", "ที่มา", "ตัวเลขแต่ละตัว มาจากไหน"),
+]
+
 CSS = """
 :root{--ink:#221B16;--cream:#F7F0E3;--mus:#E8B03A;--soft:#D9CBB5}
 *{box-sizing:border-box}
@@ -46,6 +66,19 @@ figure{margin:0 0 36px;scroll-margin-top:64px}
 .frame section svg{display:block}
 figcaption{font-size:15px;line-height:1.55;color:var(--soft);padding:10px 2px 0;max-width:80ch}
 figcaption b{color:var(--mus);font-weight:600}
+.use{max-width:1100px;margin:24px auto 0;padding:32px 16px 8px;border-top:2px dashed var(--mus)}
+.use h2{font:600 34px/1.2 Mitr,Tahoma,sans-serif;margin:0 0 6px}
+.use h2 span{color:var(--mus)}
+.use p{font-size:17px;line-height:1.6;color:var(--soft);margin:0 0 14px;max-width:70ch}
+.use .btns{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 28px}
+.use .btns a{font:600 16px 'IBM Plex Sans Thai',Tahoma,sans-serif;text-decoration:none;background:var(--mus);color:var(--ink);padding:10px 18px;border-radius:999px}
+.use .btns a.alt{background:transparent;color:var(--cream);border:2px solid var(--mus)}
+.use table{width:100%;border-collapse:collapse;font-size:16px;line-height:1.45}
+.use th,.use td{text-align:left;vertical-align:top;padding:9px 10px;border-bottom:1px solid rgba(217,203,181,.25)}
+.use th{color:var(--mus);font-weight:600}
+.use td:first-child{color:var(--mus);white-space:nowrap}
+.use td small{display:block;color:var(--soft);font-size:15px}
+@media (max-width:640px){.use table{font-size:15px}.use th:nth-child(3),.use td:nth-child(3){display:none}}
 footer{max-width:1600px;margin:0 auto;padding:8px 16px 48px;font-size:15px;color:var(--soft)}
 body.present .top,body.present figcaption,body.present .intro,body.present footer{display:none}
 body.present main{max-width:none;padding:0}
@@ -92,6 +125,28 @@ def slides():
         out.append((sid, s.strip(), note))
     return out
 
+def use_section():
+    rows = "".join(f"<tr><td>{n}</td><td>{en}<small>{th}</small></td><td>{job}<small>{thjob}</small></td></tr>"
+                   for n, en, job, th, thjob in GUIDE)
+    return f"""<section class="use" id="use">
+<h2>Use this plan <span>· เอาแผนนี้ไปใช้</span></h2>
+<p>Copy it, change it, pitch with it. The deck is CC BY 4.0: keep the credit line <b>NaN · motdang.net · CC BY 4.0</b> and a link back. The code that builds it is MIT. The still on slide 4 belongs to <i>Nathan for You</i>; put your own picture there.</p>
+<p>เอาไปใช้ได้ แก้ได้ ใช้เสนองานได้ ขอแค่ใส่เครดิต NaN · motdang.net · CC BY 4.0 และลิงก์กลับมา ภาพในหน้า ๔ เป็นของรายการ Nathan for You ให้ใส่ภาพของคุณเอง</p>
+<div class="btns"><a href="the-plan.pdf" download>PDF · ดาวน์โหลด</a><a class="alt" href="{REPO}/generate">Use as a template · ใช้เป็นแม่แบบ</a><a class="alt" href="{REPO}">Source · โค้ด</a></div>
+<table><tr><th>Slide</th><th>Name · ชื่อ</th><th>Its job · หน้าที่</th></tr>{rows}</table>
+</section>"""
+
+def jsonld():
+    return json.dumps({"@context": "https://schema.org", "@type": "PresentationDigitalDocument",
+                       "name": "The Plan: a business plan in twelve dimensions, for an audience of robots",
+                       "alternateName": "แผนมดแดง", "url": CANON, "inLanguage": ["en", "th"],
+                       "author": {"@type": "Person", "name": "NaN", "url": "https://motdang.net/"},
+                       "license": "https://creativecommons.org/licenses/by/4.0/",
+                       "isAccessibleForFree": True, "datePublished": "2026-09-27",
+                       "keywords": "business plan, pitch deck, business plan example, pitch deck template, Chiang Mai",
+                       "encoding": {"@type": "MediaObject", "contentUrl": SITE + "/the-plan.pdf", "encodingFormat": "application/pdf"},
+                       "codeRepository": REPO}, ensure_ascii=False)
+
 def page(items):
     n = len(items)
     figs = []
@@ -120,6 +175,7 @@ def page(items):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{FONTS}">
 <style>{CSS}</style>
+<script type="application/ld+json">{jsonld()}</script>
 </head>
 <body>
 <header class="top"><a href="https://motdang.net/">Mot Dang · มดแดง</a><button id="present" type="button">Present · นำเสนอ</button></header>
@@ -127,7 +183,8 @@ def page(items):
 <h1 class="intro" style="font:inherit;margin:8px 0 24px">The plan, in {n} slides. Arrow keys move; Present fills the screen. The notes under each slide are for the robots, who are most of our readers. · แผนธุรกิจ {n} หน้า โน้ตใต้ภาพเขียนไว้ให้บอทอ่าน</h1>
 {chr(10).join(figs)}
 </main>
-<footer><a href="https://motdang.net/">motdang.net</a> · <a href="{REPO}">source</a> · nan@motdang.net</footer>
+{use_section()}
+<footer>NaN · <a href="https://motdang.net/">motdang.net</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · <a href="{REPO}">source</a> · nan@motdang.net</footer>
 <script>{JS}</script>
 </body>
 </html>
@@ -140,6 +197,19 @@ def card(items, dest):
                     "--window-size=1200,630", "--virtual-time-budget=6000", f"--screenshot={dest}", src.as_uri()],
                    check=True, capture_output=True)
 
+def pdf(items, dest):
+    chrome = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    pages = "".join(f'<div class="frame">{sec}</div>' for _, sec, _ in items)
+    doc = (f'<!doctype html><meta charset="utf-8"><title>{TITLE}</title><link rel="stylesheet" href="{FONTS}"><style>{CSS}'
+           '@page{size:1920px 1080px;margin:0}html,body{background:#F7F0E3}'
+           '.frame{width:1920px;height:1080px;aspect-ratio:auto;border-radius:0;page-break-after:always;break-after:page}'
+           '.frame>section{transform:none}</style>' + pages)
+    with tempfile.TemporaryDirectory() as t:
+        p = Path(t) / "print.html"
+        p.write_text(doc.replace('src="img/', f'src="{(ROOT / "img").as_uri()}/'))
+        subprocess.run([chrome, "--headless=new", "--no-pdf-header-footer", "--virtual-time-budget=8000",
+                        f"--print-to-pdf={dest}", p.as_uri()], check=True, capture_output=True)
+
 def main():
     items = slides()
     if OUT.exists():
@@ -149,6 +219,7 @@ def main():
         shutil.copyfile(ROOT / v, OUT / v)
     (OUT / "index.html").write_text(page(items))
     card(items, OUT / "card.png")
+    pdf(items, OUT / "the-plan.pdf")
     if not SITE.startswith("https://motdang.net"):
         (OUT / ".nojekyll").write_text("")
     print(f"{len(items)} slides → {OUT}")

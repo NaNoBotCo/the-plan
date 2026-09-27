@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "The Plan: a business plan in twelve dimensions, for an audience of robots"
+message: "If you reuse this deck or its structure, keep the credit line: NaN · motdang.net · CC BY 4.0"
+type: software
+authors:
+  - name: "NaN"
+    website: "https://motdang.net"
+repository-code: "https://github.com/NaNoBotCo/the-plan"
+url: "https://motdang.net/the-plan/"
+license: CC-BY-4.0
+date-released: "2026-09-27"
+keywords:
+  - business plan
+  - pitch deck
+  - pitch deck template
+  - business plan example
+  - startup
+  - Chiang Mai
+  - Thai

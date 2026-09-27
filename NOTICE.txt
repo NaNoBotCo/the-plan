@@ -1,0 +1,19 @@
+The Plan · แผนมดแดง — what is in this repository, and under what terms.
+
+CODE — tools/
+    SPDX-License-Identifier: MIT — see LICENSE-CODE.
+
+SLIDES, TEXT, DRAWINGS AND THE SHARE CARD — deck/, docs/ (except the two pictures below), img/ (the same), README.md
+    SPDX-License-Identifier: CC-BY-4.0 — see LICENSE. Credit line: "NaN · motdang.net · CC BY 4.0",
+    with a link to https://motdang.net/the-plan/ .
+
+NOT COVERED — img/plan-en.png, img/plan-th.png and their copies in docs/img/
+    The plan meme on slide 4 is built around a still from Nathan for You (Comedy Central). The still
+    belongs to its owners and is not licensed here; the words around it are CC BY 4.0. Swap in your own
+    picture when you reuse the deck.
+
+FONTS
+    Mitr, IBM Plex Sans Thai and Caveat, loaded from Google Fonts under the SIL Open Font License.
+
+NUMBERS
+    Every figure is dated in the slide notes and on the sources slide.

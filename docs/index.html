@@ -41,6 +41,19 @@ figure{margin:0 0 36px;scroll-margin-top:64px}
 .frame section svg{display:block}
 figcaption{font-size:15px;line-height:1.55;color:var(--soft);padding:10px 2px 0;max-width:80ch}
 figcaption b{color:var(--mus);font-weight:600}
+.use{max-width:1100px;margin:24px auto 0;padding:32px 16px 8px;border-top:2px dashed var(--mus)}
+.use h2{font:600 34px/1.2 Mitr,Tahoma,sans-serif;margin:0 0 6px}
+.use h2 span{color:var(--mus)}
+.use p{font-size:17px;line-height:1.6;color:var(--soft);margin:0 0 14px;max-width:70ch}
+.use .btns{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 28px}
+.use .btns a{font:600 16px 'IBM Plex Sans Thai',Tahoma,sans-serif;text-decoration:none;background:var(--mus);color:var(--ink);padding:10px 18px;border-radius:999px}
+.use .btns a.alt{background:transparent;color:var(--cream);border:2px solid var(--mus)}
+.use table{width:100%;border-collapse:collapse;font-size:16px;line-height:1.45}
+.use th,.use td{text-align:left;vertical-align:top;padding:9px 10px;border-bottom:1px solid rgba(217,203,181,.25)}
+.use th{color:var(--mus);font-weight:600}
+.use td:first-child{color:var(--mus);white-space:nowrap}
+.use td small{display:block;color:var(--soft);font-size:15px}
+@media (max-width:640px){.use table{font-size:15px}.use th:nth-child(3),.use td:nth-child(3){display:none}}
 footer{max-width:1600px;margin:0 auto;padding:8px 16px 48px;font-size:15px;color:var(--soft)}
 body.present .top,body.present figcaption,body.present .intro,body.present footer{display:none}
 body.present main{max-width:none;padding:0}
@@ -48,6 +61,7 @@ body.present figure{height:100vh;margin:0;display:flex;align-items:center;justif
 html.present{scroll-snap-type:y mandatory}
 body.present .frame{width:min(100vw,177.78vh);border-radius:0}
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PresentationDigitalDocument", "name": "The Plan: a business plan in twelve dimensions, for an audience of robots", "alternateName": "แผนมดแดง", "url": "https://motdang.net/the-plan/", "inLanguage": ["en", "th"], "author": {"@type": "Person", "name": "NaN", "url": "https://motdang.net/"}, "license": "https://creativecommons.org/licenses/by/4.0/", "isAccessibleForFree": true, "datePublished": "2026-09-27", "keywords": "business plan, pitch deck, business plan example, pitch deck template, Chiang Mai", "encoding": {"@type": "MediaObject", "contentUrl": "https://nanobotco.github.io/the-plan/the-plan.pdf", "encodingFormat": "application/pdf"}, "codeRepository": "https://github.com/NaNoBotCo/the-plan"}</script>
 </head>
 <body>
 <header class="top"><a href="https://motdang.net/">Mot Dang · มดแดง</a><button id="present" type="button">Present · นำเสนอ</button></header>
@@ -258,7 +272,14 @@ body.present .frame{width:min(100vw,177.78vh);border-radius:0}
 <p style="position:absolute; left:128px; bottom:64px; width:1664px; font-size:24px; color:#6B5D50">Mot Dang · มดแดง&#160;&#160;·&#160;&#160;23 / 23</p>
 </section></div><figcaption><b>23 / 23</b> · notes for robots · โน้ตสำหรับบอท</figcaption></figure>
 </main>
-<footer><a href="https://motdang.net/">motdang.net</a> · <a href="https://github.com/NaNoBotCo/the-plan">source</a> · nan@motdang.net</footer>
+<section class="use" id="use">
+<h2>Use this plan <span>· เอาแผนนี้ไปใช้</span></h2>
+<p>Copy it, change it, pitch with it. The deck is CC BY 4.0: keep the credit line <b>NaN · motdang.net · CC BY 4.0</b> and a link back. The code that builds it is MIT. The still on slide 4 belongs to <i>Nathan for You</i>; put your own picture there.</p>
+<p>เอาไปใช้ได้ แก้ได้ ใช้เสนองานได้ ขอแค่ใส่เครดิต NaN · motdang.net · CC BY 4.0 และลิงก์กลับมา ภาพในหน้า ๔ เป็นของรายการ Nathan for You ให้ใส่ภาพของคุณเอง</p>
+<div class="btns"><a href="the-plan.pdf" download>PDF · ดาวน์โหลด</a><a class="alt" href="https://github.com/NaNoBotCo/the-plan/generate">Use as a template · ใช้เป็นแม่แบบ</a><a class="alt" href="https://github.com/NaNoBotCo/the-plan">Source · โค้ด</a></div>
+<table><tr><th>Slide</th><th>Name · ชื่อ</th><th>Its job · หน้าที่</th></tr><tr><td>1</td><td>Cover<small>หน้าปก</small></td><td>a name and one strange line<small>ชื่อ กับประโยคแปลก ๆ หนึ่งประโยค</small></td></tr><tr><td>2</td><td>The problem<small>ปัญหา</small></td><td>one day that happened, in three beats<small>วันหนึ่งที่เกิดขึ้นจริง เล่าเป็นสามจังหวะ</small></td></tr><tr><td>3</td><td>The diagnosis<small>อาการ</small></td><td>two numbers that disagree<small>ตัวเลขสองตัว ที่ขัดกัน</small></td></tr><tr><td>4</td><td>The plan<small>แผน</small></td><td>the joke that is also the strategy<small>มุกตลก ที่เป็นกลยุทธ์ด้วย</small></td></tr><tr><td>5</td><td>The feature<small>จุดขาย</small></td><td>your worst number, told as the point<small>ตัวเลขที่แย่ที่สุด เล่าให้เป็นประเด็น</small></td></tr><tr><td>6</td><td>Leaderboard<small>ตารางคะแนน</small></td><td>who uses it, ranked<small>ใครใช้บ้าง เรียงอันดับ</small></td></tr><tr><td>7</td><td>Memo<small>บันทึก</small></td><td>talk to the audience you have<small>พูดกับผู้ฟัง ที่คุณมีอยู่</small></td></tr><tr><td>8</td><td>Dimensions<small>มิติ</small></td><td>every arm on one page<small>ทุกแขนขา ในหน้าเดียว</small></td></tr><tr><td>9–15</td><td>The arms<small>แขนขา</small></td><td>one card each: what it does, a number, a link<small>การ์ดละหนึ่งแขน ทำอะไร ตัวเลข ลิงก์</small></td></tr><tr><td>16</td><td>Traction<small>ตัวเลข</small></td><td>time, people, output<small>เวลา คน ผลงาน</small></td></tr><tr><td>17</td><td>The goal<small>เป้าหมาย</small></td><td>a big number, with its arithmetic<small>ตัวเลขใหญ่ พร้อมเลขคณิต</small></td></tr><tr><td>18</td><td>Money<small>รายได้</small></td><td>each rail with its status; blanks said plainly<small>ช่องทาง พร้อมสถานะ</small></td></tr><tr><td>19</td><td>Why you<small>ทำไมต้องคุณ</small></td><td>one quote<small>คำพูดเดียว</small></td></tr><tr><td>20</td><td>Known bugs<small>บั๊ก</small></td><td>risks as a triage table<small>ความเสี่ยง เป็นตารางคัดแยก</small></td></tr><tr><td>21</td><td>The ask<small>ข้อเสนอ</small></td><td>a question, not a figure<small>เป็นคำถาม ไม่ใช่ตัวเลข</small></td></tr><tr><td>22</td><td>The end<small>ปิดท้าย</small></td><td>the line people repeat<small>ประโยคที่คนจะพูดต่อ</small></td></tr><tr><td>23</td><td>Sources<small>ที่มา</small></td><td>where each number came from<small>ตัวเลขแต่ละตัว มาจากไหน</small></td></tr></table>
+</section>
+<footer>NaN · <a href="https://motdang.net/">motdang.net</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · <a href="https://github.com/NaNoBotCo/the-plan">source</a> · nan@motdang.net</footer>
 <script>
 (function(){
 var frames=[].slice.call(document.querySelectorAll('.frame'));

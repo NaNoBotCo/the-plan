@@ -35,7 +35,7 @@ GUIDE = [
     ("17", "The goal", "a big number, with its arithmetic", "เป้าหมาย", "ตัวเลขใหญ่ พร้อมเลขคณิต"),
     ("18", "Money", "each rail with its status; blanks said plainly", "รายได้", "ช่องทาง พร้อมสถานะ"),
     ("19", "Why you", "one quote", "ทำไมต้องคุณ", "คำพูดเดียว"),
-    ("20", "Known bugs", "risks as a triage table", "บั๊ก", "ความเสี่ยง เป็นตารางคัดแยก"),
+    ("20", "Known bugs", "risks as a triage table", "บั๊ก", "ความเสี่ยง เป็นตารางคัดแยก"),  # stylecheck: allow — deck slide topic (business risks), not a warning to the reader
     ("21", "The ask", "a question, not a figure", "ข้อเสนอ", "เป็นคำถาม ไม่ใช่ตัวเลข"),
     ("22", "The end", "the line people repeat", "ปิดท้าย", "ประโยคที่คนจะพูดต่อ"),
     ("23", "Sources", "where each number came from", "ที่มา", "ตัวเลขแต่ละตัว มาจากไหน"),

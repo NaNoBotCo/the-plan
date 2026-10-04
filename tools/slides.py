@@ -186,7 +186,7 @@ sec('why', f'''{eyebrow('Why this, why her · ทำไม', MUST)}
 brows=[('Nobody visits.','Feature. (NaN, 27 Sep)'),('Google has read 4 of 98,153 pages.','The other robots came 1.95M times in one week.'),('One human.','62 days, 88,888 places.'),('Revenue to date: ask NaN.','Short of ฿1,000,000,000 by about ฿1,000,000,000.')]
 bt=f'<tr><th style="width:48%">Bug · บั๊ก</th><th style="width:52%">Status · สถานะ</th></tr>'+''.join(f'<tr><td>{a}</td><td>{b}</td></tr>' for a,b in brows)
 sec('bugs', f'''{eyebrow('Known bugs · บั๊กที่รู้แล้ว')}
-{h2('Risks, triaged.', 'ความเสี่ยง คัดแยกแล้ว')}
+{h2('Risks, triaged.', 'ความเสี่ยง คัดแยกแล้ว')} <!-- stylecheck: allow — slide title (business risks), not a warning to the reader -->
 <table style="font-size:32px; color:{INK}; font-family:{BODY}">{bt}</table>
 {hand('won’t fix', 1500, 250, 300, -8, RED, 72)}''', notes='Google index from Search Console, 20 Sep. Robot traffic from Cloudflare, 16 to 22 Sep.')
 

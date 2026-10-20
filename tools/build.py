@@ -193,7 +193,9 @@ def page(items):
 def card(items, dest):
     chrome = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
     # the address printed on the card is the copy's own, so each host serves its own image
-    src = ROOT / "tools" / "_card.tmp.html"
+    fd, tmp = tempfile.mkstemp(prefix="_card.", suffix=".html", dir=ROOT / "tools")
+    os.close(fd)
+    src = Path(tmp)
     src.write_text((ROOT / "tools" / "card.html").read_text().replace(
         'class="url">motdang.net/the-plan<', f'class="url">{SITE.split("://", 1)[1]}<'))
     try:

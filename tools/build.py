@@ -19,7 +19,7 @@ FONTS = ("https://fonts.googleapis.com/css2?family=Mitr:wght@400;500;600"
          "&family=IBM+Plex+Sans+Thai:wght@400;600&family=Caveat:wght@500&display=swap")
 TITLE = "Mot Dang — the plan · แผนมดแดง"
 DESC = ("A business plan in twelve dimensions, for an audience of robots. "
-        "Mot Dang, a Thai-first directory of Chiang Mai and Chiang Rai: 62 days, one human, 88,888 places.")
+        "Mot Dang, a Thai-first directory of Chiang Mai and Chiang Rai: 62 days, a team of six, 88,888 places.")
 
 GUIDE = [
     ("1", "Cover", "a name and one strange line", "หน้าปก", "ชื่อ กับประโยคแปลก ๆ หนึ่งประโยค"),

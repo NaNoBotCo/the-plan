@@ -174,13 +174,13 @@ sec('money', f'''{eyebrow('The money · รายได้')}
  notes='Rails as decided: marked sponsor box and affiliate links (client decision 5 Sep 2026). ')
 
 # 15 why
-sec('why', f'''{eyebrow('Why this, why her · ทำไม', MUST)}
-<p style="font-family:{HEAD}; font-size:180px; font-weight:600; line-height:1; color:{CREAM}">“I am the product.”</p>
-<p style="font-family:{HEAD}; font-size:64px; color:{MUST}">“ฉันคือสินค้า” — NaN</p>
+sec('why', f'''{eyebrow('Why this · ทำไม', MUST)}
+<p style="font-family:{HEAD}; font-size:150px; font-weight:600; line-height:1.05; color:{CREAM}">Access · taxonomy · throughput.</p>
+<p style="font-family:{HEAD}; font-size:64px; color:{MUST}">การเข้าถึง · การจัดหมวด · ปริมาณงาน</p>
 <div style="flex:1"></div>
-<p style="font-size:40px; line-height:1.4; color:{CREAM}">Access · taxonomy · throughput. Money buys the last two.</p>
-<p style="font-size:34px; line-height:1.4; color:#F3D9D4">การเข้าถึง · การจัดหมวด · ปริมาณงาน เงินซื้อได้ แค่สองอย่างหลัง</p>''', bg=RED, fg=CREAM, footc='#F3D9D4', layout='display:flex; flex-direction:column; gap:24px',
- notes='The thesis of the August deck at motdang.net/brief, in her words.')
+<p style="font-size:40px; line-height:1.4; color:{CREAM}">Money buys the last two.</p>
+<p style="font-size:34px; line-height:1.4; color:#F3D9D4">เงินซื้อได้ แค่สองอย่างหลัง</p>''', bg=RED, fg=CREAM, footc='#F3D9D4', layout='display:flex; flex-direction:column; gap:24px',
+ notes='Access, taxonomy, throughput: money buys the last two.')
 
 # 16 bugs
 brows=[('Nobody visits.','Feature. (NaN, 27 Sep)'),('Google has read 4 of 98,153 pages.','The other robots came 1.95M times in one week.'),('One human.','62 days, 88,888 places.'),('Revenue to date: ask NaN.','Short of ฿1,000,000,000 by about ฿1,000,000,000.')]

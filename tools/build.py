@@ -168,9 +168,9 @@ def page(items):
 <meta property="og:title" content="{TITLE}">
 <meta property="og:description" content="{html.escape(DESC)}">
 <meta property="og:url" content="{SITE}/">
-<meta property="og:image" content="{SITE}/card.png?v=2">
+<meta property="og:image" content="{SITE}/card.png?v={"2" if SITE.startswith("https://motdang.net") else "3"}">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="A business plan for an audience of robots. 299 humans, 1,950,000 robots in one week. motdang.net/the-plan">
+<meta property="og:image:alt" content="A business plan for an audience of robots. 299 humans, 1,950,000 robots in one week. {SITE.split("://", 1)[1]}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{FONTS}">
@@ -192,10 +192,18 @@ def page(items):
 
 def card(items, dest):
     chrome = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-    src = ROOT / "tools" / "card.html"
-    subprocess.run([chrome, "--headless=new", "--hide-scrollbars", "--force-device-scale-factor=1",
-                    "--window-size=1200,630", "--virtual-time-budget=6000", f"--screenshot={dest}", src.as_uri()],
-                   check=True, capture_output=True)
+    # the address printed on the card is the copy's own, so each host serves its own image
+    fd, tmp = tempfile.mkstemp(prefix="_card.", suffix=".html", dir=ROOT / "tools")
+    os.close(fd)
+    src = Path(tmp)
+    src.write_text((ROOT / "tools" / "card.html").read_text().replace(
+        'class="url">motdang.net/the-plan<', f'class="url">{SITE.split("://", 1)[1]}<'))
+    try:
+        subprocess.run([chrome, "--headless=new", "--hide-scrollbars", "--force-device-scale-factor=1",
+                        "--window-size=1200,630", "--virtual-time-budget=6000", f"--screenshot={dest}", src.as_uri()],
+                       check=True, capture_output=True)
+    finally:
+        src.unlink(missing_ok=True)
 
 def pdf(items, dest):
     chrome = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"

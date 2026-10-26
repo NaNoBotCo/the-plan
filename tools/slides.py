@@ -183,12 +183,12 @@ sec('why', f'''{eyebrow('Why this · ทำไม', MUST)}
  notes='Access, taxonomy, throughput: money buys the last two.')
 
 # 16 bugs
-brows=[('Nobody visits.','Feature. (NaN, 27 Sep)'),('Google has read 4 of 98,153 pages.','The other robots came 1.95M times in one week.'),('One human.','62 days, 88,888 places.'),('Revenue to date: ask NaN.','Short of ฿1,000,000,000 by about ฿1,000,000,000.')]
+brows=[('Nobody visits.','Feature. (NaN, 27 Sep)'),('Google has read 4 of 98,153 pages.','The other robots came 1.95M times in one week.'),('<s>One human.</s>','Four people hold the keys. Two or more of each part, about ฿1,750 a month (26 Oct).'),('Revenue to date: ask NaN.','Short of ฿1,000,000,000 by about ฿1,000,000,000.')]
 bt=f'<tr><th style="width:48%">Bug · บั๊ก</th><th style="width:52%">Status · สถานะ</th></tr>'+''.join(f'<tr><td>{a}</td><td>{b}</td></tr>' for a,b in brows)
 sec('bugs', f'''{eyebrow('Known bugs · บั๊กที่รู้แล้ว')}
 {h2('Risks, triaged.', 'ความเสี่ยง คัดแยกแล้ว')} <!-- stylecheck: allow — slide title (business risks), not a warning to the reader -->
 <table style="font-size:32px; color:{INK}; font-family:{BODY}">{bt}</table>
-{hand('won’t fix', 1500, 250, 300, -8, RED, 72)}''', notes='Google index from Search Console, 20 Sep. Robot traffic from Cloudflare, 16 to 22 Sep.')
+{hand('won’t fix', 1500, 250, 300, -8, RED, 72)}''', notes='Google index from Search Console, 20 Sep. Robot traffic from Cloudflare, 16 to 22 Sep. Keys and spares: hongdam.net/studio/dj/#spares, 26 Oct.')
 
 # 17 ask
 sec('ask', f'''{eyebrow('The ask · ข้อเสนอ')}

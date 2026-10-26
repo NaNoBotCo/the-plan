@@ -32,9 +32,9 @@ sec('cover', f'''<div style="position:absolute; left:1150px; top:250px; width:62
 <p style="font-family:{HEAD}; font-size:120px; font-weight:500; line-height:1.1; color:{RED}">มดแดง</p>
 <p style="font-family:{HEAD}; font-size:44px; line-height:1.3; color:{SOFT}">แผนธุรกิจ สิบสองมิติ</p>
 <div style="flex:1"></div>
-<div style="display:flex; gap:24px">{pill('Chiang Mai + Chiang Rai · เชียงใหม่ + เชียงราย', MUST, INK, -2)}{pill('day 62 · one human · วันที่ ๖๒', RED, CREAM, 2)}</div>
+<div style="display:flex; gap:24px">{pill('Chiang Mai + Chiang Rai · เชียงใหม่ + เชียงราย', MUST, INK, -2)}{pill('day 62 · team of six · วันที่ ๖๒', RED, CREAM, 2)}</div>
 {hand('(four, six, twelve, or more)', 1240, 680, 560, -4)}''', layout='display:flex; flex-direction:column; gap:24px', foot=False,
- notes='Mot Dang is a Thai-first directory of Chiang Mai and Chiang Rai, built by one human in 62 days, 27 Jul to 27 Sep 2026. Its readers are nearly all robots, and that is the pitch.')
+ notes='Mot Dang is a Thai-first directory of Chiang Mai and Chiang Rai, built in 62 days, 27 Jul to 27 Sep 2026; on 26 Oct 2026 the team is six people. Its readers are nearly all robots, and that is the pitch.')
 
 # 2 tooth
 sec('tooth', f'''{eyebrow('The problem · ปัญหา')}
@@ -151,10 +151,10 @@ sec('open', f'''{eyebrow('Dimensions 11–12 · มิติ ๑๑–๑๒')}
 def stat(n, en, th, src, c=RED):
     return f'<div style="display:flex; gap:40px; align-items:center; border-top:3px solid {INK}; padding:18px 0 0 0"><p style="width:380px; font-family:{HEAD}; font-size:72px; font-weight:600; line-height:1; color:{c}">{n}</p><div style="flex:1; display:flex; flex-direction:column; gap:2px"><p style="font-size:32px">{en}</p><p style="font-size:26px; color:{SOFT}">{th} · {src}</p></div></div>'
 sec('numbers', f'''{eyebrow('Traction · ตัวเลข')}
-{h2('62 days. One human.', '๖๒ วัน มนุษย์หนึ่งคน')}
+{h2('62 days. A team of six.', '๖๒ วัน ทีมหกคน')}
 <div style="display:flex; flex-direction:column; gap:20px">
 {stat('62','days since the domain opened, 27 Jul 2026','วันตั้งแต่เปิดโดเมน','27 Sep')}
-{stat('1','human working on it','มนุษย์ที่ทำงานนี้','NaN', INK)}
+{stat('6','people on the team; 4 hold the keys to the code','คนในทีม สี่คนถือกุญแจโค้ด','26 Oct', INK)}
 {stat('88,888','places, live','สถานที่','27 Sep')}
 {stat('98,153','pages built','หน้าเว็บ','20 Sep', INK)}
 </div>
@@ -200,9 +200,9 @@ sec('ask', f'''{eyebrow('The ask · ข้อเสนอ')}
 
 # 18 end
 sec('end', f'''<div style="width:420px; height:245px; transform:rotate(-6deg)">{ant(420, CREAM, INK)}</div>
-<p style="font-family:{HEAD}; font-size:96px; font-weight:600; line-height:1.05; color:{CREAM}; text-align:center">Twelve dimensions.<br>One human.<br>Two million robots a week.</p>
-<p style="font-family:{HEAD}; font-size:56px; color:#F3D9D4; text-align:center">สิบสองมิติ มนุษย์หนึ่งคน บอทเกือบสองล้าน ต่อสัปดาห์</p>''', bg=RED, fg=CREAM, footc='#F3D9D4', layout='display:flex; flex-direction:column; gap:24px; align-items:center; justify-content:center',
- notes='1.95 million requests in the week of 16 to 22 Sep 2026, rounded to two million.')
+<p style="font-family:{HEAD}; font-size:96px; font-weight:600; line-height:1.05; color:{CREAM}; text-align:center">Twelve dimensions.<br>A team of six.<br>Two million robots a week.</p>
+<p style="font-family:{HEAD}; font-size:56px; color:#F3D9D4; text-align:center">สิบสองมิติ ทีมหกคน บอทเกือบสองล้าน ต่อสัปดาห์</p>''', bg=RED, fg=CREAM, footc='#F3D9D4', layout='display:flex; flex-direction:column; gap:24px; align-items:center; justify-content:center',
+ notes='1.95 million requests in the week of 16 to 22 Sep 2026, rounded to two million. Team of six on 26 Oct 2026.')
 
 # 19 appendix sources
 src=['Readers leaderboard: Cloudflare, 16–22 Sep 2026, 1.95M requests; people from the browser beacon','Billion arithmetic: ฿1,000,000,000 ÷ 88,888 places · ÷ 23,000,000 requests · ÷ ฿25,000','Places, shelves, map count: motdang.net and /audit.json, 27 Sep 2026','Fleet search: 105,077 pages of 20 sites, live 21 Sep 2026','Massage counts: OpenStreetMap and thdata.co, 5 Sep 2026','Google index: Search Console, 20 Sep 2026','Traffic: Cloudflare, 16–22 Sep 2026; 99.99% and 23M are NaN’s figures','Nets, home-help, real estate, full moon: built 26–27 Sep 2026']
